@@ -15,6 +15,7 @@ pipeline{
             docker container rm myapp
            docker build -t aspnetcoreapp .
            docker run -d -p 8083:8083 --name myapp aspnetcoreapp
+           docker scan aspnetcoreapp
             '''
         }
         }
