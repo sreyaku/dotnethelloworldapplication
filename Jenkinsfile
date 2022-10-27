@@ -14,7 +14,7 @@ pipeline{
                 docker container stop myapp
             docker container rm myapp
            docker build -t aspnetcoreapp .
-            //docker run  --rm -d -p 80:8082 testimage:1.0
+            //docker run  --rm -d -p 80:8083 testimage:1.0
              docker run -d -p 8083:80 --name myapp aspnetcoreapp
             '''
         }
