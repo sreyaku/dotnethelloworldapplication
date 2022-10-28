@@ -4,7 +4,7 @@ pipeline{
         stage('gitclone'){
             agent any
             steps{
-                git credentialsId: 'bc010765-2802-482d-8502-5f629f70228a', url: 'https://github.com/sreyaku/NodeApplication.git'
+                git credentialsId: 'bc010765-2802-482d-8502-5f629f70228a', url: 'https://github.com/sreyaku/dotnethelloworldapplication.git'
             }
         }
 
@@ -14,7 +14,7 @@ pipeline{
                 docker container stop myapp
             docker container rm myapp
            docker build -t aspnetcoreapp .
-           docker run -d -p 8083:8083 --name myapp aspnetcoreapp
+           docker run -d -p 80:80 --name myapp aspnetcoreapp
           
             '''
         }
