@@ -11,7 +11,7 @@ stages{
                
             }
         }
-            stage('Java_build') {
+            stage('dotnet_build') {
                 steps {
                     script{
                         Dotnetdeploy()
